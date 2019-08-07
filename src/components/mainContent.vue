@@ -10,19 +10,19 @@
                     class="grid-content step" 
                     :class="{'bg-yellow' : view==='orderList'}"
                     >
-                        <p v-on:click="changeView('orderList')"><i class="el-icon-goods"></i>確認訂單</p>
+                        <p ><i class="el-icon-goods"></i>確認訂單</p>
                     </el-col>
                     <el-col :xs="8" :sm="8" :md="8" :lx="8" :lg="8" 
                     class="grid-content step"  
                     :class="{'bg-yellow' : view==='payment'}"
                     >
-                        <p v-on:click="changeView('payment')"><i class="el-icon-wallet"></i>支付方式</p>
+                        <p ><i class="el-icon-wallet"></i>支付方式</p>
                     </el-col>
                     <el-col :xs="8" :sm="8" :md="8" :lx="8" :lg="8" 
                     class="grid-content step" 
                     :class="{'bg-yellow' : view==='payCompleted'}"
                     >
-                        <p v-on:click="changeView('payCompleted')"><i class="el-icon-circle-check"></i>完成支付</p>
+                        <p ><i class="el-icon-circle-check"></i>完成支付</p>
                     </el-col>
                 </el-row>
             </div>
@@ -64,9 +64,6 @@ components: {
       changeCompo(viewName) {
          this.view = viewName;
       },
-      changeView(val) {
-          this.view = val;
-      }
   },
 }
 </script>
@@ -84,7 +81,7 @@ components: {
     background: #e5e9f2;
   }
   .step {
-    cursor: pointer;
+    cursor:not-allowed;
   }
  .step:hover {
     background-color:rgb(252, 219, 130);
