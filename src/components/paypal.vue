@@ -33,7 +33,7 @@
         </el-row>
         <el-row>
           <el-col :span="24" :lg="24" :md="24" :xs="24" :sm="24">
-            <el-checkbox  v-model="stateChecked" @change="checkForm('ruleForm')">Yes</el-checkbox>
+            <el-checkbox  v-model="stateChecked" @change="checkForm()">Yes</el-checkbox>
              <span style="word-wrap:break-word;">．我已詳知<el-link type="danger">相關條款</el-link>,M-Pay將依您提供資料與銀行照會及保留出貨權益，提醒您勿冒用他人個資進行交易，經查獲必移送法辦</span>
           </el-col>
         </el-row>
@@ -117,7 +117,7 @@ export default {
         }
       }
     },
-    checkForm(formName){
+    checkForm(){
       this.$refs['ruleForm'].validate((valid) => {
           if (valid && this.stateChecked) {
             this.$emit('paybtn','ok');

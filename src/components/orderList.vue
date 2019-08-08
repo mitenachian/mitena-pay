@@ -35,9 +35,10 @@
         <el-row type="flex" class="row-bg" justify="end">
         <el-col :span="8" :lx="8" :lg="8" :md="8" :sm="24" :xs="24">
             <div style="text-align: right;">
-                結帳金額:{{ countTotal}}
+                結帳金額: {{ countTotal  }}
             </div>
             <div style="text-align: right; margin-top:10px;">
+                <el-button type="danger">繼續買</el-button>
                 <el-button type="info" @click="checkout">來去結帳</el-button>
                 <!--點選時切換components-->
             </div>
@@ -56,7 +57,7 @@ export default {
             prdName: '婚紗酒杯 | 香檳杯 敬酒杯 結婚',
             price: 980,
             specialPrice: 880,
-            qty:1,
+            qty:2,
             },
             {
             picSrc: 'prd2.jpg',

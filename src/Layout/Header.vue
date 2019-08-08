@@ -9,11 +9,6 @@
 </template>
 <script>
 export default {
-  methods: {
-    singOut(){  
-      console.log('logOut!')
-    }
-  },
 }
 </script>
 <style scoped>

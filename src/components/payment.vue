@@ -33,16 +33,17 @@
         </el-row>
         <el-divider><i class="el-icon-bank-card"></i></el-divider>
         <component :is="payMeth" @paybtn="paybtn"></component>
-        <el-divider><i class="el-icon-money"></i>付款金額:1,669</el-divider>
+        <el-divider><i class="el-icon-money"></i>付款金額:2,549</el-divider>
         <el-row type="flex" class="row-bg" justify="center">
         <el-col :span="8" :lx="8" :lg="8" :md="8" :sm="24" :xs="24">
             <div style="text-align:center; margin-top:10px;">
+              <el-button type="danger" @click="goBack">回購物車</el-button>
                 <el-button 
                 type="info"
                 @click="checkout" 
                 :disabled="disabled"
                  v-loading.fullscreen.lock="fullscreenLoading"
-                 element-loading-text="Loding , 不要走阿!!!"
+                 element-loading-text="Loading , 不要走~~~~!!!"
                 >確認付款</el-button>
                 <!--點選時切換components-->
             </div>
@@ -72,13 +73,15 @@ components: {
     }
   },
   methods: {
+    goBack(){
+        this.$emit('changeCompo','orderList');
+    },
     checkout(){
             this.fullscreenLoading = true;
         setTimeout(() => {
           this.fullscreenLoading = false;
            this.$emit('changeCompo','payCompleted');
         }, 3000);
-       
     },
     payWay(val){
       this.payMeth = val;

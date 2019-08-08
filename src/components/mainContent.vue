@@ -7,19 +7,19 @@
             <el-col :xs="20" :sm="20" :md="20" :lx="20" :lg="16"><div class="grid-content">
                 <el-row :gutter="10">
                     <el-col :xs="8" :sm="8" :md="8" :lx="8" :lg="8" 
-                    class="grid-content step" 
+                    class="grid-content" 
                     :class="{'bg-yellow' : view==='orderList'}"
                     >
                         <p ><i class="el-icon-goods"></i>確認訂單</p>
                     </el-col>
                     <el-col :xs="8" :sm="8" :md="8" :lx="8" :lg="8" 
-                    class="grid-content step"  
+                    class="grid-content"  
                     :class="{'bg-yellow' : view==='payment'}"
                     >
                         <p ><i class="el-icon-wallet"></i>支付方式</p>
                     </el-col>
                     <el-col :xs="8" :sm="8" :md="8" :lx="8" :lg="8" 
-                    class="grid-content step" 
+                    class="grid-content" 
                     :class="{'bg-yellow' : view==='payCompleted'}"
                     >
                         <p ><i class="el-icon-circle-check"></i>完成支付</p>
@@ -33,9 +33,6 @@
             <el-col :xs="2" :sm="2" :md="2" :lx="2" :lg="4"><div class="grid-content "></div></el-col>
             <el-col :xs="20" :sm="20" :md="20" :lx="20" :lg="16"><div class="grid-content">
                 <component :is="view" @changeCompo="changeCompo"></component>
-                <!--訂單資料 componets-->
-                <!--付款資料+支付方式 componets-->
-                <!--訂單完成 componets-->
             </div>
             </el-col>
             <el-col :xs="2" :sm="2" :md="2" :lx="2" :lg="4"><div class="grid-content "></div></el-col>
@@ -80,9 +77,7 @@ components: {
   .bg-purple-light {
     background: #e5e9f2;
   }
-  .step {
-    cursor:not-allowed;
-  }
+
  .step:hover {
     background-color:rgb(252, 219, 130);
   }
