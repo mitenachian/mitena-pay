@@ -1,5 +1,6 @@
 # mitena-pay
 
+[DEMO](https://mitenachian.github.io/mitena-pay/)
 ## Project setup
 ```
 npm install
